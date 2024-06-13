@@ -1,0 +1,12 @@
+#client
+import socket
+
+ip = socket.gethostname()
+port = 12345
+
+skt = socket.socket()
+skt.connect((ip,port))
+
+msg = "こんにちは 😍"
+skt.send(msg.encode())
+skt.close()
